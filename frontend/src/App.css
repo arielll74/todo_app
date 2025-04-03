@@ -1,0 +1,148 @@
+/* App.css */
+
+/* Default light mode */
+body {
+  background-color: #FFFFFF;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #000000;
+  color: white;
+}
+
+/* Container */
+.todo-container {
+  background: #02d9aa;
+  padding: 40px;
+  border-radius: 20px;
+  width: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  position: relative;
+  color: black;
+}
+
+/* Dark mode for the todo-container */
+body.dark-mode .todo-container {
+  background: #1e2a32;
+  color: white;
+}
+
+/* Title */
+h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+  color: inherit;
+  text-align: center;
+}
+
+/* Buttons */
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+  background-color: #D3D3D3;
+  color: black;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #C0C0C0;
+}
+
+/* Dark mode button */
+button.dark-mode-toggle {
+  background: #D3D3D3;
+  color: black;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+button.dark-mode-toggle:hover {
+  background: #C0C0C0;
+}
+
+/* Add Task button */
+button.add-task {
+  background: #D3D3D3;
+  color: black;
+  width: 130px;
+  margin-top: 2px; /* Minimal margin */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button.add-task:hover {
+  background: #C0C0C0;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: white;
+}
+
+/* Ensure no gaps */
+.todo-container {
+  overflow: hidden;
+}
+
+/* Task list, filter, and edit styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+select {
+  padding: 8px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+select option {
+  background-color: #222;
+  color: white;
+}
+
+/* Edit and Delete button styles */
+li button {
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-left: 5px;
+  background-color: #D3D3D3;
+  color: black;
+}
